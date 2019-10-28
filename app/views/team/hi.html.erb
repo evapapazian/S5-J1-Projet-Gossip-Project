@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+  .center {
+     margin: 0 auto;
+     width: 900px; 
+}
+
+</style>
+
+<head>
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dce7d4;">
+  <a class="navbar-brand" href="#">The Gossip Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class ="nav-link"> <%=link_to "Home", accueil_path %> </a>
+      </li>
+
+      <li class="nav-item">
+    <a class="nav-link"> <%= link_to "Team", team_path %> </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link"> <%=link_to "Contact", contact_path %> </a> 
+      </li>
+  
+      
+    </ul>
+  </div>
+</nav>
+	<title>PAGE TEAM</title>
+</head>
+<body>
+
+</br>
+</br>
+
+<div class="center">
+	<h1> Voici la team à l'origine de ce magnifique site: </h1>
+	</br>
+<img src="https://static1.ozap.com/articles/2/41/87/92/@/4242840-les-tuche-620x0-1.jpg" alt="les tuche">
+	</br>
+	</br>
+<p> Avoue, tu ne t'attendais pas à ce qu'ils fassent THP.</p>
+
+</div>
+</body>
+</html>

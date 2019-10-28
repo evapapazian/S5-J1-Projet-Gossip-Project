@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<style type="text/css">
+  .center-div {
+     margin: 0 auto;
+     width: 500px; 
+}
+
+</style>
+
+
+
+<head>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dce7d4;">
+  <a class="navbar-brand" href="#">The Gossip Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+     
+      <li class="nav-item">
+        <a class ="nav-link"> <%=link_to "Home", accueil_path %> </a>
+      </li>
+
+      <li class="nav-item">
+    <a class="nav-link"> <%= link_to "Team", team_path %> </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link"> <%=link_to "Contact", contact_path %> </a> 
+      </li>
+  
+      
+    </ul>
+  </div>
+</nav>
+
+<title> PAGE DE BIENVENUE ET LISTE DE GOSSIPS</title>
+</head>
+<body>
+ 
+
+<div class="center-div">
+</br>
+<h1>  Bienvenue sur la page d'accueil ! </h1>
+ <p> Plusieurs gossips ont été écrits par tes prédecesseurs. En voici la liste: </p>
+</div>
+
+
+
+
+<div class="center-div">
+<p>
+  <% Gossip.all.each do|gossip| %>
+ <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://assets.afcdn.com/story/20130224/16683_w767h767c1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text"> Auteur du Gossip: <%= gossip.user.first_name %> </br>
+    Titre du Gossip: <%=  gossip.title %> </br>
+<% end %>
+  </div>
+</div>
+</p>
+</div>
+
+
+</body>
+
+
+
+
+</html>
